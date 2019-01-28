@@ -1,0 +1,136 @@
+body {
+  overflow: hidden;
+  display: none;
+}
+
+/* Body Defaults */
+
+html {
+  cursor: none !important;
+}
+
+html:active {
+  cursor: none !important;
+}
+
+@font-face {
+  font-family: "Gotham SSm";
+  src: local("Gotham SSm"), url("./GothamSSm-Book.ttf") format("ttf"),
+    url("./GothamSSm-Book.otf") format("otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham SSm", Verdana, sans-serif !important;
+  background: black !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+}
+
+h1 {
+  font-size: 3rem !important;
+  color: white !important;
+  position: absolute;
+  z-index: 9999;
+  top: 10vh;
+  text-align: center;
+  width: 100%;
+}
+
+/* Home Text  */
+
+@keyframes background-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.b-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./background.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: background-scale 58s infinite;
+  animation-direction: alternate;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+
+@keyframes fademein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fademeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-size: contain !important;
+  padding: 3em;
+  background-origin: content-box !important;
+  border-radius: 2%;
+}
+
+.boxes > .box:active {
+  transform: scale(1.15);
+  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.7));
+}
+
+.box1 {
+  background: url("./yv-logo.png") center center no-repeat,
+    linear-gradient(0deg, rgb(171, 44, 41), rgb(171, 44, 41));
+}
+
+.box2 {
+  background: url("./jfm-logo.svg") center center no-repeat,
+    linear-gradient(0deg, rgb(171, 44, 41), rgb(171, 44, 41));
+}
+
+.box3 {
+  background: url("./FCBH-PNG.png") center center no-repeat,
+    linear-gradient(0deg, rgb(171, 44, 41), rgb(171, 44, 41));
+}
