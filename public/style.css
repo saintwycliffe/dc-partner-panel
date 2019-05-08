@@ -81,15 +81,6 @@ h1 {
   }
 }
 
-@keyframes fademeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .center {
   display: flex;
   flex-direction: column;
